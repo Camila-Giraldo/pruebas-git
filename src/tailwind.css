@@ -1,0 +1,67 @@
+/*
+  FALTA ESTE DETALLE
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+  body {
+    font-family: "Poppins", sans-serif !important;
+  }
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-dark: #000b1d;
+  --primary-default: #2c3e50;
+  --primary-light: #abbdcf;
+
+  --secondary-dark: #627273;
+  --secondary-default: #95a5a6;
+  --secondary-light: #e1f1f2;
+
+  --success-dark: #008969;
+  --success-default: #18bc9c;
+  --success-light: #97ffff;
+
+  --info-dark: #0165a8;
+  --info-default: #3498db;
+  --info-light: #b3ffff;
+
+  --warning-dark: #c06900;
+  --warning-default: f39c12;
+  --warning-light: #ffff91;
+
+  --danger-dark: #b41909;
+  --danger-default: #e74c3c;
+  --danger-light: #ffcbbb;
+
+  --gray-dark: #01070d;
+  --gray-default: #343a40;
+  --gray-light: #b3b9bf;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl text-primary-dark tracking-wide leading-10;
+  }
+  h2 {
+    @apply text-2xl text-primary tracking-tight leading-10;
+  }
+  h3 {
+    @apply italic text-xl text-primary leading-10;
+  }
+  p {
+    @apply text-primary;
+  }
+  #content a :not(#menubar) {
+    @apply no-underline text-blue-700 hover:underline;
+  }
+  .item-menu {
+    @apply md:p-4 py-3 px-0 block text-gray-light hover:text-white;
+  }
+  #menu-toggle:checked + #menubar,  .dropdown:hover .dropdown-menu {
+    @apply block;
+  }
+}
